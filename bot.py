@@ -2,17 +2,15 @@ import openai
 import telebot
 from pymongo import MongoClient
 
-client = MongoClient('mongodb+srv://evgenykazanjan:bGhhiHTUpgxqArpN@usersdb.8ifdgqa.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('MONGO_TOKEN')
 db = client.usersdb.users
 
 
-dict_user = {'phone' : '79954242141',
-             'messages': []}
 definite = False
 
 
-openai.api_key = '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'
-bot = telebot.TeleBot('5955579956:AAEf-eXQ1-Ua7nN_9BCZdI5WziSeoWIOVq0')
+openai.api_key = 'OPENAI_TOKEN'
+bot = telebot.TeleBot('TG_TOKEN')
 mode = 0
 
 phone = 0
